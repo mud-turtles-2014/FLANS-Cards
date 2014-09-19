@@ -1,15 +1,13 @@
 enable :sessions
 
-
 get '/deck' do
   @decks = Deck.all
   erb :deck
 end
 
 get '/deck/:deck_id' do
-  session[:id] = 1
   @deck = Deck.find(params[:deck_id])
-  @user = User.find(session[:id]) #make sure Alex defined this way
+  @user = User.find(session[:user_id]) #make sure Alex defined this way
 
   @round = Round.create(user: @user, deck: @deck, last_position: 1)
   Playsheet.create_round_play(@round, @deck)
@@ -21,7 +19,7 @@ end
 
 get '/deck/:deck_id/card/:card_id' do
   @deck = Deck.find(params[:deck_id])
-  @user = User.find(session[:id])
+  @user = User.find(session[:user_id])
   @card = Card.find(params[:card_id])
   @round = Round.find(session[:round_id])
 
@@ -49,7 +47,7 @@ post '/deck/:deck_id/card/:card_id' do
   session[:answer] = params[:answer]
 
   @deck = Deck.find(params[:deck_id])
-  @user = User.find(session[:id])
+  @user = User.find(session[:user_id])
   @card = Card.find(params[:card_id])
   @round = Round.find(session[:round_id])
 
