@@ -46,10 +46,11 @@ a:active {
 
 input[type="text"] {
   font-family: 'Shadows Into Light', cursive;
+
 }
 
-#submit {
-  font-family: 'Shadows Into Light', cursive;
+.button {
+  font-family: 'Lato', sans-serif;
 
 }
 

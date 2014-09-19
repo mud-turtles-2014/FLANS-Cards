@@ -7,7 +7,7 @@ end
 
 get '/deck/:deck_id' do
   @deck = Deck.find(params[:deck_id])
-  @user = User.find(session[:user_id]) #make sure Alex defined this way
+  @user = User.find(session[:user_id])
 
   @round = Round.create(user: @user, deck: @deck, last_position: 1)
   Playsheet.create_round_play(@round, @deck)
