@@ -43,6 +43,6 @@ end
 
 delete '/session' do
   session.clear
-  erb :logout
+  erb :'users/logout'
 end
 
