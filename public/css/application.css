@@ -1,3 +1,67 @@
 .container {
   font-family: 'Lato', sans-serif;
 }
+
+h1 {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+
+h3 {
+  font-family: 'Lato', sans-serif;
+}
+
+header {
+  background-color: #007FFF;
+}
+
+a {
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.header {
+  font-size: 50px;
+
+}
+
+.header:link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.header:visited {
+  color: #000000;
+  text-decoration: none;
+}
+
+.header:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
+.header:active {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:link {
+  color: #000000;
+  text-decoration
+}
+
+a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000080;
+  text-decoration: none;
+}
+
+a:active {
+  color: #000000;
+  text-decoration: none;
+}
+
+
