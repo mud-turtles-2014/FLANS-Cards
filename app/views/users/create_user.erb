@@ -1,11 +1,24 @@
 <h1>Create User</h1>
 
 <form class="button" action="/user/create" method="POST">
-
-  Name:<input type="text" name="user[name]"><br>
-  Choose your username:<input type="text" name="user[username]"><br>
-  Create a password:<input type="text" name="user[password]"><br>
-  Confirm your password:<input type="text" name="user[password_confirmation]"><br>
+  <table>
+    <tr>
+      <td align="right">Name:</td>
+      <td align="left"><input type="text" name="user[name]"></td>
+    </tr>
+    <tr>
+      <td align="right">Choose your username:</td>
+      <td align="left"><input type="text" name="user[username]"></td>
+    </tr>
+    <tr>
+      <td align="right">Create a password:</td>
+      <td align="left"><input type="text" name="user[password]"></td>
+    </tr>
+    <tr>
+      <td align="right">Confirm your password:</td>
+      <td align="left"><input type="text" name="user[password_confirmation]"></td>
+    </tr>
+  </table>
   <input type="submit" name="Submit">
 
 </form>

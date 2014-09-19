@@ -1,5 +1,12 @@
 .container {
   font-family: 'Lato', sans-serif;
+  width: 500px;
+  clear: both;
+}
+
+.container input {
+  width: 100%;
+  clear: both;
 }
 
 h1 {
@@ -24,23 +31,13 @@ a {
 
 }
 
-a:link {
+a:link, a:visited, a:active {
   color: #000000;
   text-decoration
 }
 
-a:visited {
-  color: #000000;
-  text-decoration: none;
-}
-
 a:hover {
   color: #000080;
-  text-decoration: none;
-}
-
-a:active {
-  color: #000000;
   text-decoration: none;
 }
 
