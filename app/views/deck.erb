@@ -1,0 +1,6 @@
+<h3>List of Decks</h3>
+<ul>
+  <% @decks.each do |deck| %>
+  <li><a href="/deck/<%= deck.id %>"><%= deck.name %></a></li>
+  <% end %>
+</ul>

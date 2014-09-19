@@ -1,0 +1,24 @@
+
+
+
+
+<% if @played %>
+  <p><%= @card.front%></p>
+  <p>Your Answer: <%= @user_answer %></p>
+  <p>Correct Answer: <%= @answer %></p>
+  <%= "You got it right!!!" if @correct %>
+  <br>
+  <% if @finish %>
+  <a href="/deck/<%= @deck.id %>/score">Score Me!</a>
+  <% else %>
+  <a href="/deck/<%= @deck.id %>/card/<%= @next_card.id %>">Next Card</a>
+<% end %>
+
+<% else %>
+<p><%= @card.front%></p>
+<form action="/deck/<%= @card.deck.id %>/card/<%= @card.id %>" method="POST">
+  <input type="text" name="answer" placeholder="Whaddya think?">
+  <input type="submit" value="Check">
+</form>
+<% end %>
+
