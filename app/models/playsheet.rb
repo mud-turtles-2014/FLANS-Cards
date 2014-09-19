@@ -11,5 +11,4 @@ class Playsheet < ActiveRecord::Base
       Playsheet.create(round: round, card: card)
     end
   end
-
 end
