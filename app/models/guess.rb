@@ -5,4 +5,5 @@ class Guess < ActiveRecord::Base
   has_one :deck, through: :card
   has_many :deck_tags, through: :decks
   has_many :tags, through: :deck_tags
+  has_one :playsheet, through: :round
 end
