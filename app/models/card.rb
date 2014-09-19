@@ -5,4 +5,5 @@ class Card < ActiveRecord::Base
   has_many :tags, through: :deck
   has_many :guesses
   has_many :rounds, through: :deck
+  has_many :playsheets, through: :rounds
 end
