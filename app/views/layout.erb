@@ -11,8 +11,7 @@
     application.css is where you put your styles
   -->
   <link rel="stylesheet" href="/css/application.css">
-  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Oswald:700|Roboto+Slab:300|Open+Sans' rel='stylesheet' type='text/css'>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
@@ -22,11 +21,22 @@
 </head>
 <body>
 <!--  <a href="/">Home</a> -->
-<header>
-  <a href="/"><p class="header">Flashcards</p></a>
+  <div id="pageHeader">
+    <header><h1>Flashcards</h1></header>
+    <nav>
+      <ul>
+        <a href="/"><li>Home</li></a>
+        <% if session[:user_id] %>
+        <a href="/logout"><li>Logout</li></a>
+        <a href="/user/<%= session[:user_id] %>"><li>My Profile</li></a>
+        <% else %>
+        <a href="/session"><li>Sign In</li></a>
+        <a href="/user"><li>New Account</li></a>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
   <div class="container">
-</header>
-
     <%= yield %>
   </div>
 </body>

@@ -1,24 +1,26 @@
 
 
 
-
+<!-- refactor play logic into controller/model -->
+<!-- split into diff erb docs -->
+<div class="flashcard">
+<h1><%= @card.front%></h1>
 <% if @played %>
-  <p><%= @card.front%></p>
   <p>Your Answer: <%= @user_answer %></p>
   <p>Correct Answer: <%= @answer %></p>
   <%= "You got it right!!!" if @correct %>
   <br>
   <% if @finish %>
-  <a href="/deck/<%= @deck.id %>/score">Score Me!</a>
+  <button><a href="/deck/<%= @deck.id %>/score">Score!</a></button>
   <% else %>
-  <a href="/deck/<%= @deck.id %>/card/<%= @next_card.id %>">Next Card</a>
+  <button><a href="/deck/<%= @deck.id %>/card/<%= @next_card.id %>">Next</a></button>
 <% end %>
 
 <% else %>
-<p><%= @card.front%></p>
 <form action="/deck/<%= @card.deck.id %>/card/<%= @card.id %>" method="POST">
   <input type="text" name="answer" placeholder="Whaddya think?">
   <input type="submit" value="Check">
 </form>
 <% end %>
+</div>
 

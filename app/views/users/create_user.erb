@@ -1,11 +1,20 @@
 <h1>Create User</h1>
 
-<form action="/user/create" method="POST">
-
-  Name:<input type="text" name="user[name]"><br>
-  Choose your username:<input type="text" name="user[username]"><br>
-  Create a password:<input type="text" name="user[password]"><br>
-  Confirm your password:<input type="text" name="user[password_confirmation]"><br>
+<form action="/user" method="POST">
+  <% if @error %>
+    <div class="error">
+    <% @error.each do |attribute, messages| %>
+      <% messages.each do |message| %>
+        <%= attribute.capitalize %> : <%= message %><br>
+      <% end %>
+    <% end %>
+    </div>
+  <% end %>
+  <br>
+  <input type="text" name="user[name]" placeholder="Name"><br>
+  <input type="text" name="user[username]" placeholder="Username"><br>
+  <input type="password" name="user[password]" placeholder="Create a password"><br>
+  <input type="password" name="user[password_confirmation]" placeholder="Confirm your password"><br>
   <input type="submit" name="Submit">
 
 </form>

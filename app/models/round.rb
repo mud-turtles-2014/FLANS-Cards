@@ -5,5 +5,5 @@ class Round < ActiveRecord::Base
   has_many :cards, through: :deck
   has_many :deck_tags, through: :deck
   has_many :tags, through: :deck_tags
-  has_many :guesses, through: :cards
+  has_many :guesses
 end

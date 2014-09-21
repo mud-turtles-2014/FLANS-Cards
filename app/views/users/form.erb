@@ -1,7 +1,7 @@
 <h1>Sign In</h1>
-
+<div class = "error"><%= @error if @error %></div>
 <form action="/session" method="POST">
-  Username:<input type="text" name="username"><br>
-  Password:<input type="text" name="password"><br>
+  <input type="text" name="username" placeholder="Username"><br>
+  <input type="password" name="password" placeholder="Password"><br>
   <input type="submit" name="Submit">
 </form>
