@@ -1,4 +1,173 @@
+body {
+  font-family: "Roboto Slab";
+  font-size: 1em;
+}
+
+.flashcard {
+  font-size: 1.5em;
+}
+
+.flashcard h1 {
+  font-size: 2em;
+}
+
 .container {
+  text-align: center;
+  line-height: 3em;
+  width: 700px;
+  margin: auto;
+}
+
+table {
+  text-align: center;
+  margin: auto;
+  font-size: 1.25em;
+}
+
+td {
+  padding: 10px;
+  color: #708090;
+}
+
+header {
+  text-align: center;
+}
+
+nav {
+  font-size: .5em;
+  position: absolute;
+  top: 0px;
+  font-family: "Roboto Slab";
+}
+
+nav li {
+  display: inline;
+  padding-right: 30px;
+  text-align: left;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.25em;
+  color: black;
+}
+
+a:hover {
+  color: #708090;
+}
+
+nav a:hover {
+  color: #B0C4DE;
+}
+
+#startButton {
+  margin-top: 50px;
+  padding: 20px;
+  color: white;
+  font-size: 20px;
+  border-radius: 20px;
+  border: 0px;
+  background-color: #3fc0b6;
+}
+
+#pageHeader {
+  font-family: Oswald;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  color: white;
+  font-size: 50px;
+  background-color: #3fc0b6;
+  text-align: left;
+  padding-left: 5px;
+}
+
+button, input[type="submit"] {
+  font-family: "Roboto Slab";
+  color: white;
+  width: 100px;
+  margin: 10px;
+  font-size: 20px;
+  border: 0px;
+  border-radius: 5px;
+  background-color: #3fc0b6;
+}
+
+button a {
+  font-size: 20px;
+  color: white;
+}
+
+input[type="button"]:disabled {
+    background: lightgrey;
+}
+
+
+form, #list, form input {
+  font-family: "Open Sans";
+  font-size: 15px;
+}
+
+main {
+  width: 60%;
+  margin-right: 20%;
+  margin-left: 20%;
+  text-align: center;
+}
+
+.highlight {
+  background-color: lightyellow;
+}
+
+.bought {
+  border-bottom-width: 1px;
+  border-bottom-style: dashed;
+  border-bottom-color: black;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-decoration: line-through;
+  color: gray;
+}
+
+.deleted {
+  display: none;
+}
+
+.item {
+  border-bottom-width: 1px;
+  border-bottom-style: dashed;
+  border-bottom-color: black;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+}
+
+#messageSpace {
+  height: 30px;
+}
+
+.error {
+  color: #B22222;
+  font-size: 20px;
+}
+#otherMessage {
+
+  font-family: "Oswald";
+  font-size: 20px;
+}
+
+/*.container {
   font-family: 'Lato', sans-serif;
 }
 
@@ -13,10 +182,6 @@ h3 {
 
 header {
   background-color: #007FFF;
-}
-
-a {
-  font-family: 'Shadows Into Light', cursive;
 }
 
 .header {
@@ -42,15 +207,8 @@ a:hover {
 a:active {
   color: #000000;
   text-decoration: none;
-}
+}*/
 
-input[type="text"] {
-  font-family: 'Shadows Into Light', cursive;
-}
 
-#submit {
-  font-family: 'Shadows Into Light', cursive;
-
-}
 
 

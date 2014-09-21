@@ -1,6 +1,9 @@
 <h3>List of Decks</h3>
-<ul>
+<table>
   <% @decks.each do |deck| %>
-  <li><a href="/deck/<%= deck.id %>"><%= deck.name %></a></li>
+  <tr>
+    <td><a href="/deck/<%= deck.id %>"><%= deck.name %></a><td>
+    <td>By: <%= deck.user.name %><td>
+  </tr>
   <% end %>
-</ul>
+</table>

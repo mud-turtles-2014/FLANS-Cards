@@ -9,30 +9,42 @@ get "/" do
   erb :index
 end
 
-get "/session/new" do
+get "/session" do
+  if session[:error]
+    @error = session[:error]
+    session[:error] = nil
+  end
   erb :'users/form'
 end
 
 post "/session" do
   user = User.authenticate(params[:username], params[:password])
 
-  if user == nil
-    redirect "/session/new"
-  end
-
-  unless user == nil
+  if user == nil || user == false
+    session[:error] = "Login Failed"
+    redirect "/session"
+  else
     session[:user_id] = user.id
-    redirect "/#{user.username}/home"
+    redirect "/deck"
   end
 end
 
-post "/user/create" do
+post "/user" do
   user = User.new(params[:user])
-  user.save
-  redirect "/session/new"
+  if user.valid?
+    user.save
+    redirect "/session"
+  else
+    session[:error] = user.errors.messages
+    redirect "/user"
+  end
 end
 
-get "/user/new" do
+get "/user" do
+  if session[:error]
+    @error = session[:error]
+    session[:error] = nil
+  end
   erb :'users/create_user'
 end
 
@@ -41,8 +53,11 @@ get '/:username/home' do
   erb :'users/landing_page'
 end
 
-delete '/session' do
+# this is cheating. but how can we make an a href lead to a delete route?
+get '/logout' do
   session.clear
-  erb :'users/logout'
+  redirect :'/'
 end
+
+
 

@@ -1,0 +1,15 @@
+<h1> <%= @rounds.first.user.name %>'s Scores </h1>
+<table>
+<tr>
+  <th>Deck</th>
+  <th>Date</th>
+  <th>Score</th>
+</tr>
+<% @rounds.each do |round| %>
+<tr>
+  <td><%= round.deck.name %></td>
+  <td><%= round.updated_at.to_date %></td>
+  <td><%= round.score %></td>
+</tr>
+<% end %>
+</table>

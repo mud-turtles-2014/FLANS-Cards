@@ -6,10 +6,13 @@ class User < ActiveRecord::Base
   has_many :rounds
   has_many :guesses, through: :rounds
   has_secure_password
+  validates :name, presence: true
+  validates :username, presence: true
+
 
   def self.authenticate(username, password)
     user = User.find_by(username: username)
-    return user.authenticate(password) unless user == nil
+    return user.authenticate(password) if user
     nil
   end
 end
