@@ -4,7 +4,7 @@ before '/deck*' do
   redirect '/session' unless session[:user_id]
 end
 
-before '/user*' do
+before '/user/*' do
   redirect '/session' unless session[:user_id]
 end
 
