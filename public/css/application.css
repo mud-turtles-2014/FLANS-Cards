@@ -21,7 +21,7 @@ body {
 table {
   text-align: center;
   margin: auto;
-  font-size: 1.25em;
+  font-size: 1em;
 }
 
 td {
@@ -172,7 +172,7 @@ main {
 }
 
 .multiple_choice form {
-  width: 100px;
+  width: 250px;
   margin-right: auto;
   margin-left: auto;
 }
