@@ -14,7 +14,7 @@ body {
 .container {
   text-align: center;
   line-height: 3em;
-  width: 700px;
+  width: 800px;
   margin: auto;
 }
 
@@ -54,7 +54,7 @@ nav a {
 a {
   text-decoration: none;
   font-size: 1.25em;
-  color: black;
+  color: #3fc0b6;
 }
 
 a:hover {
@@ -91,7 +91,7 @@ button, input[type="submit"] {
   font-family: "Roboto Slab";
   color: white;
   width: 100px;
-  margin: 10px;
+/*  margin: 10px;*/
   font-size: 20px;
   border: 0px;
   border-radius: 5px;
@@ -167,6 +167,15 @@ main {
   font-size: 20px;
 }
 
+.multiple_choice {
+  text-align: left;
+}
+
+.multiple_choice form {
+  width: 100px;
+  margin-right: auto;
+  margin-left: auto;
+}
 /*.container {
   font-family: 'Lato', sans-serif;
 }

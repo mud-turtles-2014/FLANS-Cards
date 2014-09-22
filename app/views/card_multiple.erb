@@ -1,0 +1,28 @@
+
+<!-- refactor play logic into controller/model -->
+<!-- split into diff erb docs -->
+<div class="flashcard">
+<h1><%= @card.front%></h1>
+<% if @played %>
+  <p>Your Answer: <%= @user_answer %></p>
+  <p>Correct Answer: <%= @answer %></p>
+  <%= "You got it right!!!" if @correct %>
+  <br>
+  <% if @finish %>
+  <button><a href="/deck/<%= @deck.id %>/score">Score!</a></button>
+  <% else %>
+  <button><a href="/deck/<%= @deck.id %>/multiple/card/<%= @next_card.id %>">Next</a></button>
+<% end %>
+
+<% else %>
+<div class="multiple_choice">
+<form action="/deck/<%= @card.deck.id %>/multiple/card/<%= @card.id %>" method="POST">
+  <input type="radio" value="<%= @answers[0]%>" name="answer"> <%= @answers[0]%><br>
+  <input type="radio" value="<%= @answers[1]%>" name="answer"> <%= @answers[1]%><br>
+  <input type="radio" value="<%= @answers[2]%>" name="answer"> <%= @answers[2]%><br>
+  <input type="radio" value="<%= @answers[3]%>" name="answer"> <%= @answers[3]%><br>
+  <input type="submit" value="Check">
+</form>
+</di
+<% end %>
+</div>
