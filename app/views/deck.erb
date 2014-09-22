@@ -2,7 +2,8 @@
 <table>
   <% @decks.each do |deck| %>
   <tr>
-    <td><a href="/deck/<%= deck.id %>"><%= deck.name %></a><td>
+  	<td><%= deck.name %><td>
+    <td><a href="/deck/<%= deck.id %>">Flashcards</a> | <a href="/deck/<%= deck.id %>/multiple">Multiple Choice</a><td>
     <td>By: <%= deck.user.name %><td>
   </tr>
   <% end %>
