@@ -25,11 +25,12 @@
     <header><h1>Flashcards</h1></header>
     <nav>
       <ul>
-        <a href="/"><li>Home</li></a>
         <% if session[:user_id] %>
+        <a href="/deck"><li>Home</li></a>
         <a href="/logout"><li>Logout</li></a>
         <a href="/user/<%= session[:user_id] %>"><li>My Profile</li></a>
         <% else %>
+        <a href="/"><li>Home</li></a>
         <a href="/session"><li>Sign In</li></a>
         <a href="/user"><li>New Account</li></a>
         <% end %>
